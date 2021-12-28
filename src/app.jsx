@@ -1,7 +1,8 @@
 import './App.css';
+import MainScreen from './page/mainScreen.jsx';
 
 const App = () =>{
-    return <h1>Welcome to react</h1>
+    return <MainScreen />
 }
 
 export default App;

@@ -1,0 +1,26 @@
+.sceneryContainer{
+    width: 100%;
+    max-width: 550px;
+    margin: 16px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+
+    background-color: rgb(26, 25, 25);
+    padding: 24px;
+}
+
+.sceneryContainer > div{
+    width: 163px;
+    height: 130px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    font-size: 5rem;
+
+    background-color: skyblue;
+}
