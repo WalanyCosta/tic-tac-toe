@@ -1,8 +1,5 @@
 import './App.css';
 import MainScreen from './page/mainScreen.jsx';
 
-const App = () =>{
-    return <MainScreen />
-}
-
+const App = () =><MainScreen/>;
 export default App;
