@@ -2,46 +2,53 @@ import './style.css';
 import React, {useState } from 'react';
 import changeLetter from './changeLetter';
 
-const MainScreen = ({active = true}) => {
+const MainScreen = (props) => {
+    const [marker, setMarker] = useState('');
     const [showLetters, setShowLetters] = useState(new Map());
     const items = ['item-1','item-2','item-3','item-4','item-5','item-6','item-7','item-8','item-9'];
+
+    const clear = () =>{
+        setTimeout(()=>{
+            setMarker('')
+            setShowLetters(new Map());
+        }, 2000)
+    }
 
     const verifyWinner = (map) =>{
             if(map.get('item-1') === map.get('item-2') && map.get('item-2') === map.get('item-3')
                 && map.has('item-2')){
-                    alert('Vencedor ')
-                    setShowLetters(new Map()) 
+                    setMarker('item-1');
+                    clear();
             }else if(map.get('item-4') === map.get('item-5') && map.get('item-5') === map.get('item-6')
                 && map.has('item-5')){
-                    alert('Vencedor')
-                    setShowLetters(new Map()) 
+                    setMarker('item-2');
+                    clear();
             }else if(map.get('item-7') === map.get('item-8') && map.get('item-8') === map.get('item-9') 
                 && map.has('item-8')){
-                    alert('Vencedor')
-                    setShowLetters(new Map()) 
+                    setMarker('item-3');
+                    clear();
             }else if(map.get('item-1') === map.get('item-4') && map.get('item-4') === map.get('item-7') 
                 && map.has('item-4')){
-                    alert('Vencedor')
-                    setShowLetters(new Map()) 
+                    setMarker('item-4');
+                    clear();
             }else if(map.get('item-2') === map.get('item-5') && map.get('item-5') === map.get('item-8') 
                 && map.has('item-5')){
-                    alert('Vencedor')
-                    setShowLetters(new Map()) 
+                    setMarker('item-5');
+                    clear();
             }else if(map.get('item-3') === map.get('item-6') && map.get('item-6') === map.get('item-9') 
                 && map.has('item-6')){
-                    alert('Vencedor')
-                    setShowLetters(new Map()) 
+                    setMarker('item-6');
+                    clear();
             }else if(map.get('item-1') === map.get('item-5') && map.get('item-5') === map.get('item-9') 
                 && map.has('item-5')){
-                    alert('Vencedor')
-                    setShowLetters(new Map()) 
+                    setMarker('item-7');
+                    clear();
             }else if(map.get('item-3') === map.get('item-5') && map.get('item-5') === map.get('item-7') 
                 && map.has('item-5')){
-                    alert('Vencedor')
-                    setShowLetters(new Map()) 
+                    setMarker('item-8');
+                    clear();
             }else if(map.size === 9){
-                alert('Empate');
-                setShowLetters(new Map())
+                clear();
             }
     }
 
@@ -68,7 +75,9 @@ const MainScreen = ({active = true}) => {
     }
 
     return (
-        <div className='sceneryContainer'>
+        <div className={
+            marker !=='' ? `sceneryContainer ${marker}` : 'sceneryContainer'
+        }>
             {
                 items.map(item =>{
                     return (

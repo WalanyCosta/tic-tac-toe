@@ -35,7 +35,7 @@ const Starts = (props) =>{
                     )}
                 </div>
 
-                {!invert ?? (
+                {!invert?'':(
                     <MainScreen />
                 )}
 
@@ -55,9 +55,17 @@ const Starts = (props) =>{
                 </div>
             </div>
 
-            <div className="group-button">
+            <div className={invert ? 'group-button on': 'group-button'}>
                 <button type='button'><IoMdAlarm /></button>
-                <button type='button'><IoIosPlay/></button>
+                <button 
+                    type='button' 
+                    onClick={(e) => {
+                        e.preventDefault();
+                        startGame();
+                    }}
+                >
+                    <IoIosPlay />
+                </button>
                 <button type='button'><IoIosVolumeHigh/></button>
             </div>
         </div>

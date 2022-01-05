@@ -9,9 +9,7 @@
 
     background-color: white;
     border-radius: 8px;
-    box-shadow: 2px 2px 2px 5px rgba(34, 34, 34, 0.363);
-
-    animation: sceneryAnimation 5s 1s both;
+    box-shadow: 2px 2px 5px 3px rgba(34, 34, 34, 0.363);
 }
 
 .sceneryContainer > div{
@@ -24,15 +22,15 @@
     align-items: center;
     font-size: 8rem;
     font-family: 'Chewy', cursive;
-}
 
-.sceneryContainer > div{
     border-top: 0;
     border-left: 0;
     border-right: 2px;
     border-bottom: 0;
     border-color: #2f2f2fb7;
     border-style: dashed;
+
+    background-color: none;
 }
 
 .sceneryContainer > div:nth-child(n + 4){
@@ -48,28 +46,49 @@
 }
 
 
-@keyframes sceneryAnimation{
-    10%{
-        margin-top: -30px;
-    }
 
-    30%{
-        margin-top: -30px;
-    }
-
-    50%{
-        margin-top: -30px;
-    }
-
-    70%{
-        margin-top: -30px;
-    }
-
-    100%{
-        margin-top: -30px;
-    }
+.sceneryContainer.item-1 > div:nth-child(1),
+.sceneryContainer.item-1 > div:nth-child(2),
+.sceneryContainer.item-1 > div:nth-child(3){
+    background-color: #e0b115;
 }
 
-.sceneryContainer.on{
-    display: none;
+.sceneryContainer.item-2 > div:nth-child(4),
+.sceneryContainer.item-2 > div:nth-child(5),
+.sceneryContainer.item-2 > div:nth-child(6){
+    background-color: #e0b115;
+}
+
+.sceneryContainer.item-3 > div:nth-child(n + 7){
+    background-color: #e0b115;
+}
+
+.sceneryContainer.item-4 > div:nth-child(1),
+.sceneryContainer.item-4 > div:nth-child(4),
+.sceneryContainer.item-4 > div:nth-child(7){
+    background-color: #e0b115;
+}
+
+.sceneryContainer.item-5 > div:nth-child(2),
+.sceneryContainer.item-5 > div:nth-child(5),
+.sceneryContainer.item-5 > div:nth-child(8){
+    background-color: #e0b115;
+}
+
+.sceneryContainer.item-6 > div:nth-child(3),
+.sceneryContainer.item-6 > div:nth-child(6),
+.sceneryContainer.item-6 > div:nth-child(9){
+    background-color: #e0b115;
+}
+
+.sceneryContainer.item-7 > div:nth-child(1),
+.sceneryContainer.item-7 > div:nth-child(5),
+.sceneryContainer.item-7 > div:nth-child(9){
+    background-color: #e0b115;
+}
+
+.sceneryContainer.item-8 > div:nth-child(3),
+.sceneryContainer.item-8 > div:nth-child(5),
+.sceneryContainer.item-8 > div:nth-child(7){
+    background-color: #e0b115;
 }
