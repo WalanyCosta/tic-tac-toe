@@ -72,7 +72,7 @@
 }
 
 .startsContainer .group-button.on{
-    display: none;
+    animation: animateGroup-button .8s both;
 }
 
 .startsContainer .group-button button{
@@ -96,4 +96,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes animateGroup-button{
+    10%{
+        filter: opacity(100%);
+    }
+    30%{
+        filter: opacity(70%);
+    }
+
+    50%{
+        filter: opacity(50%);
+    }
+
+    70%{
+        filter: opacity(30%);
+    }
+
+    100%{
+        filter: opacity(0);
+        display: none;
+    }
 }

@@ -11,7 +11,7 @@ const MainScreen = (props) => {
         setTimeout(()=>{
             setMarker('')
             setShowLetters(new Map());
-        }, 2000)
+        }, 1500)
     }
 
     const verifyWinner = (map) =>{

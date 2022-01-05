@@ -10,6 +10,8 @@
     background-color: white;
     border-radius: 8px;
     box-shadow: 2px 2px 5px 3px rgba(34, 34, 34, 0.363);
+
+    animation: animationDown 1.5s 1s both;
 }
 
 .sceneryContainer > div{
@@ -44,8 +46,6 @@
 .sceneryContainer > div:nth-child(9){
     border-right: 0px;
 }
-
-
 
 .sceneryContainer.item-1 > div:nth-child(1),
 .sceneryContainer.item-1 > div:nth-child(2),
@@ -91,4 +91,14 @@
 .sceneryContainer.item-8 > div:nth-child(5),
 .sceneryContainer.item-8 > div:nth-child(7){
     background-color: #e0b115;
+}
+
+@keyframes animationDown {
+    from{
+        transform: translateY(-150%);
+    }
+
+    to{
+        transform: translateY(0%);
+    }
 }
