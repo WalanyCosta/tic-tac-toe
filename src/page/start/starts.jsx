@@ -2,12 +2,24 @@ import './style.css';
 import React, {useState} from 'react';
 import { IoMdAlarm, IoIosPlay, IoIosVolumeHigh } from "react-icons/io";
 import { RiUserFill } from "react-icons/ri";
-import MainScreen from './../mainScreen/mainScreen';
+import MainScreen from './../mainScreen/mainScreen'; 
+import { StartContext } from './startsContext';
 
 const Starts = (props) =>{
-    let [invert, setInvert]= useState(false);
+    const [invert, setInvert]= useState(false);
     const [player1Nome, setPlayer1Nome] = useState('');
     const [player2Nome, setPlayer2Nome] = useState('');
+    const [point, setPoint] = useState(0);
+    const [point2, setPoint2] = useState(0);
+    
+
+    const adjustPoint = (letter) =>{
+        if(letter === 'x'){
+            setPoint(point + 1);
+        }else{
+            setPoint2(point2 + 1);
+        }
+    }
 
     const startGame = () => {
         if(player1Nome === '' || player2Nome === ''){
@@ -30,13 +42,16 @@ const Starts = (props) =>{
                     ):(
                         <>
                             <h4>{player1Nome}</h4>
-                            <p>X</p>
+                            <p>Pontuação</p>
+                            <p>{point}</p>
                         </>
                     )}
                 </div>
 
                 {!invert?'':(
-                    <MainScreen />
+                    <StartContext.Provider value={{ adjustPoint }}>
+                        <MainScreen/>
+                    </StartContext.Provider>
                 )}
 
                 <div className="player player-2">
@@ -49,7 +64,8 @@ const Starts = (props) =>{
                     ):(
                         <>
                             <h4>{player2Nome}</h4>
-                            <p>O</p>
+                            <p>Pontuação</p>
+                            <p>{point2}</p>
                         </>
                     )}
                 </div>
