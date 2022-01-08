@@ -9,7 +9,7 @@
 
     background-color: white;
     border-radius: 8px;
-    box-shadow: 2px 2px 5px 3px rgba(34, 34, 34, 0.363);
+    box-shadow: 2px 2px 5px 3px #2222225d;
 
     animation: animationDown 1.5s 1s both;
 }

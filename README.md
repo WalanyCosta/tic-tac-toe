@@ -4,30 +4,30 @@
 
 <img src='./src/assets/Banner.png'>
 
-### Descrisão
+## Descrisão
 >Este mini-projeto foi desenvolvido como um aquecimento para este ano que a está só a começar.
 
 <h4 align="center"> 
 	🚧  O tic-tac-toe 🚀 Em construção...  🚧
 </h4>
 
-Tabela de conteúdos
-=================
+## Tabela de sumários
+
 <!--ts-->
    * [Descrisão](#descrisão)
    * [Tabela de Conteudo](#tabela-de-conteudo)
    * [Instalação](#instalacao)
    * [Pré-requisitos para usar o project](#Pré-requisitos)
    * [Tecnologias](#tecnologias)
+   * [Autor](#Autor)
 <!--te-->
 
 
-### Pré-requisitos
+## Pré-requisitos
+---
 
-Antes de começar, você vai precisar ter instalado em sua máquina a seguinte ferramenta que é o 
-[Git](https://git-scm.com).Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
-
-### 🎲 Rodando o projecto react-js
+> Antes de começar, você vai precisar ter instalado em sua máquina a seguinte ferramenta que é o 
+> [Git](https://git-scm.com). Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 ```bash
 # Clone este repositório
@@ -45,13 +45,16 @@ $ npm start
 # O servidor inciará na porta:3333 - acesse <http://localhost:3333>
 ```
 
-### 🛠 Tecnologias
+## 🛠 Tecnologias
+---
 
-As seguintes ferramentas foram usadas na construção do projeto:
+> As seguintes ferramentas foram usadas na construção do projeto:
 
 - [React](https://pt-br.reactjs.org/)
 - [VSCode](https://code.visualstudio.com/)
 - [Git](https://git-scm.com)
-- [react-icon]()
+- [react-icon](https://react-icons.github.io/react-icons/)
 
-### Autor
+## Autor
+---
+<span style='text-align: center;'> Desenvolvido por Walany da Costa com muito carinho 💖 esse mini-project.</span>
