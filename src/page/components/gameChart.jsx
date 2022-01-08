@@ -1,7 +1,7 @@
 import './style.css';
 import React, {useContext, useState } from 'react';
 import changeLetter from './changeLetter';
-import { SceneryContext } from '../../start/SceneryContext';
+import { SceneryContext } from '../sceneryContext';
 
 
 const GameChart = () => {
@@ -83,12 +83,12 @@ const GameChart = () => {
 
     return (
         <div className={
-            marker !=='' ? `sceneryContainer ${marker}` : 'sceneryContainer'
+            marker !=='' ? `gameChartContainer ${marker}` : 'gameChartContainer'
         }>
             {
                 divItems.map(item =>{
                     return (
-                        <div key={item} onClick={e => writeLetter(item)}
+                        <div key={item} onClick={e =>{writeLetter(item)}}
                         style={
                             showLettersInChart.get(item) === 'o' ? {color: 'lightpink'} : {color: '#1293fdc0'}
                         }>

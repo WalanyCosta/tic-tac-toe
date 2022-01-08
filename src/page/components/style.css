@@ -1,4 +1,4 @@
-.sceneryContainer{
+.gameChartContainer{
     width: 100%;
     max-width: 550px;
     margin: 16px auto 0;
@@ -14,7 +14,7 @@
     animation: animationDown 1.5s 1s both;
 }
 
-.sceneryContainer > div{
+.gameChartContainer > div{
     width: 163px;
     height: 130px;
     margin: 0 auto;
@@ -35,61 +35,61 @@
     background-color: none;
 }
 
-.sceneryContainer > div:nth-child(n + 4){
+.gameChartContainer > div:nth-child(n + 4){
     border-top: 2px;
     border-color: #2f2f2fb7;
     border-style: dashed;
 }
 
-.sceneryContainer > div:nth-child(3),
-.sceneryContainer > div:nth-child(6),
-.sceneryContainer > div:nth-child(9){
+.gameChartContainer > div:nth-child(3),
+.gameChartContainer > div:nth-child(6),
+.gameChartContainer > div:nth-child(9){
     border-right: 0px;
 }
 
-.sceneryContainer.item-1 > div:nth-child(1),
-.sceneryContainer.item-1 > div:nth-child(2),
-.sceneryContainer.item-1 > div:nth-child(3){
+.gameChartContainer.item-1 > div:nth-child(1),
+.gameChartContainer.item-1 > div:nth-child(2),
+.gameChartContainer.item-1 > div:nth-child(3){
     background-color: #e0b115;
 }
 
-.sceneryContainer.item-2 > div:nth-child(4),
-.sceneryContainer.item-2 > div:nth-child(5),
-.sceneryContainer.item-2 > div:nth-child(6){
+.gameChartContainer.item-2 > div:nth-child(4),
+.gameChartContainer.item-2 > div:nth-child(5),
+.gameChartContainer.item-2 > div:nth-child(6){
     background-color: #e0b115;
 }
 
-.sceneryContainer.item-3 > div:nth-child(n + 7){
+.gameChartContainer.item-3 > div:nth-child(n + 7){
     background-color: #e0b115;
 }
 
-.sceneryContainer.item-4 > div:nth-child(1),
-.sceneryContainer.item-4 > div:nth-child(4),
-.sceneryContainer.item-4 > div:nth-child(7){
+.gameChartContainer.item-4 > div:nth-child(1),
+.gameChartContainer.item-4 > div:nth-child(4),
+.gameChartContainer.item-4 > div:nth-child(7){
     background-color: #e0b115;
 }
 
-.sceneryContainer.item-5 > div:nth-child(2),
-.sceneryContainer.item-5 > div:nth-child(5),
-.sceneryContainer.item-5 > div:nth-child(8){
+.gameChartContainer.item-5 > div:nth-child(2),
+.gameChartContainer.item-5 > div:nth-child(5),
+.gameChartContainer.item-5 > div:nth-child(8){
     background-color: #e0b115;
 }
 
-.sceneryContainer.item-6 > div:nth-child(3),
-.sceneryContainer.item-6 > div:nth-child(6),
-.sceneryContainer.item-6 > div:nth-child(9){
+.gameChartContainer.item-6 > div:nth-child(3),
+.gameChartContainer.item-6 > div:nth-child(6),
+.gameChartContainer.item-6 > div:nth-child(9){
     background-color: #e0b115;
 }
 
-.sceneryContainer.item-7 > div:nth-child(1),
-.sceneryContainer.item-7 > div:nth-child(5),
-.sceneryContainer.item-7 > div:nth-child(9){
+.gameChartContainer.item-7 > div:nth-child(1),
+.gameChartContainer.item-7 > div:nth-child(5),
+.gameChartContainer.item-7 > div:nth-child(9){
     background-color: #e0b115;
 }
 
-.sceneryContainer.item-8 > div:nth-child(3),
-.sceneryContainer.item-8 > div:nth-child(5),
-.sceneryContainer.item-8 > div:nth-child(7){
+.gameChartContainer.item-8 > div:nth-child(3),
+.gameChartContainer.item-8 > div:nth-child(5),
+.gameChartContainer.item-8 > div:nth-child(7){
     background-color: #e0b115;
 }
 

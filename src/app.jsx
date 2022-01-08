@@ -1,5 +1,4 @@
-import './App.css';
-import Starts from './page/start/starts';
+import Starts from './page/scenery';
 
 const App = () => <Starts />;
 export default App;

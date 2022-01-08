@@ -2,12 +2,12 @@ import './style.css';
 import React, {useState} from 'react';
 import { IoMdAlarm, IoIosPlay, IoIosVolumeHigh } from "react-icons/io";
 import { RiUserFill } from "react-icons/ri";
-import GameChart from '../../components/mainScreen/mainScreen'; 
-import { SceneryContext } from './startsContext';
+import GameChart from './components/gameChart'; 
+import { SceneryContext } from './sceneryContext';
 
 const Scenery = (props) =>{
     const [activeGame, setActiveGame]= useState(false);
-    const [player1Nome, setPlayer1Nome] = useState('');
+    const [playerNome, setPlayerNome] = useState('');
     const [player2Nome, setPlayer2Nome] = useState('');
     const [point, setPoint] = useState(0);
     const [point2, setPoint2] = useState(0);
@@ -21,7 +21,7 @@ const Scenery = (props) =>{
     }
 
     const startGame = () => {
-        if(player1Nome === '' || player2Nome === ''){
+        if(playerNome === '' || player2Nome === ''){
             alert('Insere o nome dos dois jogadores!!');
         }else{
             setActiveGame(true);
@@ -38,7 +38,7 @@ const Scenery = (props) =>{
                         <input placeholder='nome' onChange={e => setPlayer1Nome(e.target.value)}/>
                     ):(
                         <>
-                            <h4>{player1Nome}</h4>
+                            <h4>{playerNome}</h4>
                             <p>Pontuação</p>
                             <p>{point}</p>
                         </>
