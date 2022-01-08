@@ -2,18 +2,17 @@ import './style.css';
 import React, {useState} from 'react';
 import { IoMdAlarm, IoIosPlay, IoIosVolumeHigh } from "react-icons/io";
 import { RiUserFill } from "react-icons/ri";
-import MainScreen from './../mainScreen/mainScreen'; 
+import GameChart from '../../components/mainScreen/mainScreen'; 
 import { StartContext } from './startsContext';
 
-const Starts = (props) =>{
-    const [invert, setInvert]= useState(false);
+const Scenery = (props) =>{
+    const [activeGame, setActiveGame]= useState(false);
     const [player1Nome, setPlayer1Nome] = useState('');
     const [player2Nome, setPlayer2Nome] = useState('');
     const [point, setPoint] = useState(0);
     const [point2, setPoint2] = useState(0);
     
-
-    const adjustPoint = (letter) =>{
+    const addPointToWinner = (letter) =>{
         if(letter === 'x'){
             setPoint(point + 1);
         }else{
@@ -25,20 +24,18 @@ const Starts = (props) =>{
         if(player1Nome === '' || player2Nome === ''){
             alert('Insere o nome dos dois jogadores!!');
         }else{
-            setInvert(true);
+            setActiveGame(true);
         }
     }
     
     return (
-        <div className="startsContainer">
+        <div className="sceneryContainer">
             <div className="playerContainer">
                 <div className="player player-1">
                     <span><RiUserFill /></span>
                     <h3>Player 1</h3>
-                    {!invert ? (
-                        <input placeholder='nome' onChange={(e)=>{
-                            setPlayer1Nome(e.target.value)
-                        }}/>
+                    {!activeGame ? (
+                        <input placeholder='nome' onChange={e => setPlayer1Nome(e.target.value)}/>
                     ):(
                         <>
                             <h4>{player1Nome}</h4>
@@ -48,19 +45,17 @@ const Starts = (props) =>{
                     )}
                 </div>
 
-                {!invert?'':(
-                    <StartContext.Provider value={{ adjustPoint }}>
-                        <MainScreen/>
+                {!activeGame?'':(
+                    <StartContext.Provider value={{ addPointToWinner }}>
+                        <GameChart />
                     </StartContext.Provider>
                 )}
 
                 <div className="player player-2">
                     <span><RiUserFill /></span>
                     <h3>Player 2</h3>
-                    {!invert ? (
-                        <input placeholder='nome' onChange={(e)=>{
-                            setPlayer2Nome(e.target.value)
-                        }}/>
+                    {!activeGame ? (
+                        <input placeholder='nome' onChange={ e => setPlayer2Nome(e.target.value)}/>
                     ):(
                         <>
                             <h4>{player2Nome}</h4>
@@ -71,15 +66,9 @@ const Starts = (props) =>{
                 </div>
             </div>
 
-            <div className={invert ? 'group-button on': 'group-button'}>
+            <div className={activeGame ? 'group-button on': 'group-button'}>
                 <button type='button'><IoMdAlarm /></button>
-                <button 
-                    type='button' 
-                    onClick={(e) => {
-                        e.preventDefault();
-                        startGame();
-                    }}
-                >
+                <button type='button' onClick={startGame}>
                     <IoIosPlay />
                 </button>
                 <button type='button'><IoIosVolumeHigh/></button>
@@ -88,4 +77,4 @@ const Starts = (props) =>{
     )
 }
 
-export default Starts;
+export default Scenery;

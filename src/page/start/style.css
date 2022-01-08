@@ -1,4 +1,4 @@
-.startsContainer{
+.sceneryContainer{
     width: 100%;
     max-width: 1100px;
     margin: 48px auto 0;
@@ -8,7 +8,7 @@
     background-color: white;
 }
 
-.startsContainer .playerContainer{
+.sceneryContainer .playerContainer{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -17,7 +17,7 @@
     margin-bottom: 24px;
 }
 
-.startsContainer .playerContainer .player{
+.sceneryContainer .playerContainer .player{
     width: 220px;
     display: flex;
     flex-direction: column;
@@ -29,41 +29,41 @@
     background-color: #1293fdc0;
 }
 
-.startsContainer .playerContainer .player-2{
+.sceneryContainer .playerContainer .player-2{
     background-color: #ffc0cba4;
 }
 
-.startsContainer .playerContainer .player input{
+.sceneryContainer .playerContainer .player input{
     border: 2px solid pink;
     padding: 8px 10px;
     border-radius: 6px;
 }
 
-.startsContainer .playerContainer .player-2 input{
+.sceneryContainer .playerContainer .player-2 input{
     border: 2px solid #1294fd;
 }
 
-.startsContainer .playerContainer .player span{
+.sceneryContainer .playerContainer .player span{
     font-size: 3rem;
 }
 
-.startsContainer .playerContainer .player-1 h3,
-.startsContainer .playerContainer .player-2 h3{
+.sceneryContainer .playerContainer .player-1 h3,
+.sceneryContainer .playerContainer .player-2 h3{
     font-size: 1.3rem;
     font-weight: 500;
 }
 
-.startsContainer .playerContainer .player-1 span,
-.startsContainer .playerContainer .player-1 h3{
+.sceneryContainer .playerContainer .player-1 span,
+.sceneryContainer .playerContainer .player-1 h3{
     color: pink;
 }
 
-.startsContainer .playerContainer .player-2 h3,
-.startsContainer .playerContainer .player-2 span{
+.sceneryContainer .playerContainer .player-2 h3,
+.sceneryContainer .playerContainer .player-2 span{
     color: #1294fd;
 }
 
-.startsContainer .group-button{
+.sceneryContainer .group-button{
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -71,11 +71,11 @@
     margin-top: 30px;
 }
 
-.startsContainer .group-button.on{
+.sceneryContainer .group-button.on{
     animation: animateGroup-button .8s both;
 }
 
-.startsContainer .group-button button{
+.sceneryContainer .group-button button{
     font-size: 3rem;
     color: #1294fd;
     padding: 4px;
@@ -85,7 +85,7 @@
     cursor: pointer;
 }
 
-.startsContainer .group-button button:nth-child(2){
+.sceneryContainer .group-button button:nth-child(2){
     height: 4rem;
     font-size: 2rem;
     background-color: pink;
