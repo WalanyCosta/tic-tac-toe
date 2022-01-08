@@ -1,11 +1,11 @@
 import './style.css';
 import React, {useContext, useState } from 'react';
 import changeLetter from './changeLetter';
-import { StartContext } from '../../page/start/startsContext';
+import { SceneryContext } from '../../start/SceneryContext';
 
 
 const GameChart = () => {
-    const { addPointToWinner } = useContext(StartContext);
+    const { addPointToWinner } = useContext(SceneryContext);
     const [marker, setMarker] = useState('');
     const [showLettersInChart, setShowLettersInChart] = useState(new Map());
     const divItems = ['item-1','item-2','item-3','item-4','item-5','item-6','item-7','item-8','item-9'];

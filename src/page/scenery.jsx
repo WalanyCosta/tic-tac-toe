@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { IoMdAlarm, IoIosPlay, IoIosVolumeHigh } from "react-icons/io";
 import { RiUserFill } from "react-icons/ri";
 import GameChart from '../../components/mainScreen/mainScreen'; 
-import { StartContext } from './startsContext';
+import { SceneryContext } from './startsContext';
 
 const Scenery = (props) =>{
     const [activeGame, setActiveGame]= useState(false);
@@ -46,9 +46,9 @@ const Scenery = (props) =>{
                 </div>
 
                 {!activeGame?'':(
-                    <StartContext.Provider value={{ addPointToWinner }}>
+                    <SceneryContext.Provider value={{ addPointToWinner }}>
                         <GameChart />
-                    </StartContext.Provider>
+                    </SceneryContext.Provider>
                 )}
 
                 <div className="player player-2">
