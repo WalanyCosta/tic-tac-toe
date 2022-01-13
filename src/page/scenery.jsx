@@ -35,7 +35,7 @@ const Scenery = (props) =>{
                     <span><RiUserFill /></span>
                     <h3>Player 1</h3>
                     {!activeGame ? (
-                        <input placeholder='nome' onChange={e => setPlayer1Nome(e.target.value)}/>
+                        <input placeholder='nome' onChange={e => setPlayerNome(e.target.value)}/>
                     ):(
                         <>
                             <h4>{playerNome}</h4>
